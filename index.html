@@ -1,137 +1,158 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tipster Gadget | Pronósticos Deportivos</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tipster Gadget | Picks Profesionales</title>
 
-  <!-- FUENTE -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap" rel="stylesheet">
 
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    *{box-sizing:border-box;margin:0;padding:0}
 
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background: linear-gradient(180deg, #050b1a, #020617);
-      color: #ffffff;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
+    body{
+      font-family:'Poppins',sans-serif;
+      background:radial-gradient(circle at top, #1b0033, #02010a);
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:20px;
+      color:#fff;
     }
 
-    .card {
-      background: #0b1229;
-      border-radius: 20px;
-      max-width: 420px;
-      width: 100%;
-      padding: 30px 25px;
-      text-align: center;
-      box-shadow: 0 0 25px rgba(0,0,0,0.6);
-      border: 1px solid #1f2a55;
+    .container{
+      max-width:480px;
+      width:100%;
+      background:linear-gradient(180deg,#0d0b1f,#05040d);
+      border-radius:26px;
+      padding:32px 26px;
+      box-shadow:0 0 40px rgba(140,0,255,0.35);
+      border:1px solid rgba(255,255,255,0.08);
     }
 
-    .logo {
-      font-size: 28px;
-      font-weight: 900;
-      letter-spacing: 1px;
-      margin-bottom: 10px;
-      color: #00ff99;
+    .badge{
+      background:linear-gradient(90deg,#ff00cc,#7f00ff);
+      display:inline-block;
+      padding:6px 16px;
+      border-radius:30px;
+      font-size:12px;
+      margin-bottom:14px;
+      font-weight:700;
+      letter-spacing:1px;
     }
 
-    .subtitle {
-      font-size: 14px;
-      opacity: 0.9;
-      margin-bottom: 25px;
+    h1{
+      font-size:30px;
+      font-weight:900;
+      line-height:1.1;
+      margin-bottom:10px;
+      background:linear-gradient(90deg,#00eaff,#ff00cc);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
     }
 
-    .sports {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin-bottom: 25px;
-      font-size: 22px;
+    .desc{
+      font-size:14px;
+      opacity:0.9;
+      margin-bottom:22px;
     }
 
-    .box {
-      background: #111b3d;
-      border-radius: 12px;
-      padding: 14px;
-      margin-bottom: 18px;
-      border: 1px solid #1f2a55;
-      font-size: 14px;
+    .grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+      margin-bottom:22px;
     }
 
-    .box strong {
-      color: #00ff99;
+    .card{
+      background:#0f0c2b;
+      border-radius:14px;
+      padding:14px 10px;
+      text-align:center;
+      border:1px solid rgba(255,255,255,0.08);
+      font-size:13px;
     }
 
-    .cta {
-      display: block;
-      margin-top: 20px;
-      background: linear-gradient(90deg, #00ff99, #00ccff);
-      color: #000;
-      padding: 16px;
-      border-radius: 14px;
-      font-weight: 900;
-      font-size: 16px;
-      text-decoration: none;
-      transition: 0.3s;
-      animation: pulse 1.5s infinite;
+    .card span{
+      display:block;
+      font-size:22px;
+      margin-bottom:6px;
     }
 
-    .cta:hover {
-      transform: scale(1.05);
+    .cta{
+      display:block;
+      width:100%;
+      background:linear-gradient(90deg,#00eaff,#7f00ff);
+      color:#000;
+      padding:18px;
+      border-radius:16px;
+      font-weight:900;
+      text-decoration:none;
+      text-align:center;
+      letter-spacing:0.5px;
+      transition:0.3s;
+      margin-top:10px;
+      position:relative;
+      overflow:hidden;
     }
 
-    @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(0,255,153,0.6); }
-      70% { box-shadow: 0 0 0 15px rgba(0,255,153,0); }
-      100% { box-shadow: 0 0 0 0 rgba(0,255,153,0); }
+    .cta::after{
+      content:"";
+      position:absolute;
+      top:0;
+      left:-100%;
+      width:100%;
+      height:100%;
+      background:linear-gradient(120deg,transparent,rgba(255,255,255,0.6),transparent);
+      animation:shine 2.5s infinite;
     }
 
-    .footer {
-      margin-top: 18px;
-      font-size: 11px;
-      opacity: 0.6;
+    @keyframes shine{
+      to{left:100%}
     }
+
+    .cta:hover{transform:scale(1.04)}
+
+    .trust{
+      margin-top:16px;
+      font-size:12px;
+      opacity:0.7;
+      text-align:center;
+    }
+
   </style>
 </head>
 
 <body>
 
-  <div class="card">
+  <div class="container">
 
-    <div class="logo">TIPSTER GADGET</div>
-    <div class="subtitle">Pronósticos deportivos profesionales</div>
+    <div class="badge">🔥 PICKS PREMIUM</div>
 
-    <div class="sports">⚽ 🏀 🎾</div>
+    <h1>TIPSTER GADGET</h1>
+    <p class="desc">
+      Comunidad de apostadores con análisis profesional en tiempo real.
+    </p>
 
-    <div class="box">
-      📊 <strong>Análisis diario</strong> de fútbol, NBA y más
+    <div class="grid">
+      <div class="card"><span>⚽</span>Fútbol Diario</div>
+      <div class="card"><span>🏀</span>NBA Picks</div>
+      <div class="card"><span>🎯</span>Estrategias</div>
+      <div class="card"><span>📈</span>Gestión Banca</div>
     </div>
 
-    <div class="box">
-      🧠 Estrategias reales + gestión de banca
-    </div>
-
-    <div class="box">
-      🚀 Acceso GRATIS al canal de Telegram
-    </div>
-
-    <!-- 👉 CAMBIA ESTE ENLACE POR TU TELEGRAM -->
     <a class="cta" href="https://t.me/TU_CANAL_AQUI" target="_blank">
-      👉 UNIRME AL CANAL DE TELEGRAM
+      🚀 ACCEDER AL CANAL DE TELEGRAM
     </a>
 
-    <div class="footer">
-      +18 | Apuesta con responsabilidad
+    <div class="trust">
+      +18 | Resultados no garantizados | Juega responsable
     </div>
 
   </div>
 
 </body>
 </html>
+
 
