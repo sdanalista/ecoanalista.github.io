@@ -1,1 +1,0 @@
-# ecoanalista.github.io
